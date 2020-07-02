@@ -1,0 +1,6 @@
+<input [(ngModel)]="inp" type="text" class="form-control w-25 m-2 mx-auto" placeholder="Search user">
+<div *ngFor="let u of users| sortByfollowers| search:inp">
+    <img style="width:200px; height: 200px;" [src]="u.image[0]">
+    <h1  routerLink="/SeeUsers/{{u.id}}" class="text-danger">{{u.username}} </h1>
+    <h3>{{u.followers}}</h3>
+</div>

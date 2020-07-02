@@ -1,0 +1,8 @@
+<h1>{{userDetails.username}}</h1>
+<h2>Followers:{{userDetails.followers}}</h2>
+<h3>Images:</h3>
+<img *ngFor="let e of userDetails.image " style="width:200px; height: 200px; border: 2px solid sienna;" [src]="e">
+<h3>Posts:</h3>
+<ul *ngFor="let c of userDetails.posts ">
+    <li><b>{{c.description}}</b> </li>
+</ul>
